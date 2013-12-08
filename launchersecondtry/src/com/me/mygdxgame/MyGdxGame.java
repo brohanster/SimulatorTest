@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.TimeUtils;
 
 public class MyGdxGame implements ApplicationListener {
 	OrthographicCamera cam;
+	
 	Texture launcher;
 	Texture bullet;
 	Rectangle projectile;
