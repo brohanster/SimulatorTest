@@ -17,7 +17,6 @@ public class MyGdxGame implements ApplicationListener {
 	
 	Texture launcher;
 	Texture bullet;
-	Rectangle projectile;
 	Rectangle shooter;
 	float x, y, angle, velocity, xVel, yVel, deltaTime;
 	SpriteBatch batch;
@@ -34,7 +33,6 @@ public class MyGdxGame implements ApplicationListener {
 		float z = yVel * time;
 		float w = time * time;
 		y = z - (4.9f * w);
-		System.out.println(y);
 		return y;
 	}
 	@Override
@@ -45,12 +43,9 @@ public class MyGdxGame implements ApplicationListener {
 		cam = new OrthographicCamera();
 		cam.setToOrtho(false, 400, 800);
 		batch = new SpriteBatch();
-		projectile = new Rectangle();
 		shooter = new Rectangle();
 		shooter.x = 0;
 		shooter.y = 0;
-		projectile.x = 0;
-		projectile.y = 0;
 		velocity = 70;
 		compute();
 		deltaTime = TimeUtils.nanoTime();
@@ -70,7 +65,7 @@ public class MyGdxGame implements ApplicationListener {
         batch.setProjectionMatrix(cam.combined);
         batch.begin();
         batch.draw(launcher, shooter.x, shooter.y);
-        batch.draw(bullet, 1.1f * x((TimeUtils.nanoTime() - deltaTime)/1000000000), 1.1f * y((TimeUtils.nanoTime()-deltaTime)/1000000000));
+        batch.draw(bullet, x((TimeUtils.nanoTime() - deltaTime)/1000000000), y((TimeUtils.nanoTime()-deltaTime)/1000000000));
         //System.out.println(TimeUtils.nanoTime());
         //System.out.println(y((TimeUtils.nanoTime()-deltaTime)/1000000000));
         batch.end();
