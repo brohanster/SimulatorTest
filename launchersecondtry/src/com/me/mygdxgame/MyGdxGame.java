@@ -13,8 +13,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.TimeUtils;
 
 public class MyGdxGame implements ApplicationListener {
-	OrthographicCamera cam;
-	
+	OrthographicCamera cam;	
 	Texture launcher;
 	Texture bullet;
 	Rectangle shooter;
@@ -66,8 +65,6 @@ public class MyGdxGame implements ApplicationListener {
         batch.begin();
         batch.draw(launcher, shooter.x, shooter.y);
         batch.draw(bullet, x((TimeUtils.nanoTime() - deltaTime)/1000000000), y((TimeUtils.nanoTime()-deltaTime)/1000000000));
-        //System.out.println(TimeUtils.nanoTime());
-        //System.out.println(y((TimeUtils.nanoTime()-deltaTime)/1000000000));
         batch.end();
 	}
 
