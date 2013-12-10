@@ -13,6 +13,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.TimeUtils;
 
 public class MyGdxGame implements ApplicationListener {
+	//Why isnt this working for owen
 	OrthographicCamera cam;	
 	Texture launcher;
 	Texture bullet;
