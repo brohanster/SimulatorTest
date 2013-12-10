@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.TimeUtils;
 
 public class MyGdxGame implements ApplicationListener {
 	//Why isnt this working for owen
+	//ima be trying to sync my own code
 	OrthographicCamera cam;	
 	Texture launcher;
 	Texture bullet;
